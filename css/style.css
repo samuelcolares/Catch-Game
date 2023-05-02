@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Press Start 2P', sans-serif;
+    text-align: center;
+    background-color: #516dff;
+    color: #fff;
+    overflow: hidden;
+}
+button:active{
+    transform: scale(0.97);
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 60px;
+}
+
+.screen.up{
+    transition: .4s;
+    margin-top: -100vh;
+}
+
+.btn{
+    border: 0;
+    background-color: #fff;
+    color: #516dff;
+    padding: 15px 20px;
+    font-family: inherit;
+    cursor: pointer;
+}
+.img-list{
+    display: flex;
+    gap: 1rem;
+}
+.choose-btn{
+    font-family: inherit;
+    border: 1px solid #fff;
+    background-color: #314fe4;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: box-shadow .2s;
+    /* flex: 1; */
+}
+.choose-btn:hover{
+    box-shadow: .1rem .1rem .5rem black;
+    background-color: white;
+    color: #314fe4;
+    /* flex: 2; */
+}
+.choose-btn:active{
+    box-shadow: .2rem .2rem .6rem black;
+    background-color: rgba(255, 255, 255, 0.575);
+}
+.choose-btn img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    margin-top: auto;
+}
+
+.choose-btn p{
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.game-container{
+    position: relative;
+}
+
+.time, .score{
+    position: absolute;
+    top: 20px;
+}
+
+.time{
+    left: 20px;
+}
+
+.score{
+    right: 20px;
+}
+
+.message{
+    line-height: 1.7;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    padding: 20px;
+    z-index: 100;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(-150%);
+    transition: all 1s;
+}
+
+.message.visible{
+    opacity: 1;
+    transform: translateY(150%);
+}
+
+.villain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    transition: .3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.villain.defeated{
+    transform: translate(-50%, -50%) scale(0);
+}
+
+
+.villain img{
+    height: 100%;
+    width: 100%;
+}

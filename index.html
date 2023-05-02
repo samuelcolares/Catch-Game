@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture o Treba</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="screen">
+        <h1>Derrote o Vilão</h1>
+        <button class="btn">Jogar</button>
+    </div>
+
+    <div class="screen">
+        <h1>Escolha a versão do vilão</h1>
+        <ul class="img-list">
+            <button class="choose-btn" data-user="pain">
+                <p>PAIN</p>
+                <img src="img/pain-select.png" alt="">
+            </button>
+            <button class="choose-btn" data-user="kurohige">
+                <p>KUROHIGE</p>
+                <img src="img/kurohige-select.png" alt="">
+            </button>
+            <button class="choose-btn" data-user="aizen">
+                <p>AIZEN</p>
+                <img src="img/aizen-select.png" alt="">
+            </button>
+            <button class="choose-btn" data-user="dio">
+                <p>DIO BRANDO</p>
+                <img src="img/dio-select.png" alt="">
+            </button>
+        </ul>
+    </div>
+    <audio src="audio/aizen.mp3" id="aizen"></audio>
+    <audio src="audio/dio.mp3" id="dio"></audio>
+    <audio src="audio/kurohige.mp3" id="kurohige"></audio>
+    <audio src="audio/pain.mp3" id="pain"></audio>
+    <div class="screen game-container">
+        <h3 class="time">Tempo: 00:00</h3>
+        <h3 class="score">Pontuação: 0</h3>
+
+        <h5 class="message">
+            É um jogo impossível! <br>
+            O vilão irá vencer
+        </h5>
+    </div>
+</body>
+</html>
